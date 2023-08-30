@@ -1,0 +1,28 @@
+.wrapper {
+    width: 100%;
+}
+
+.text {
+    position: relative;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px;
+}
+
+.cut-line {
+    position: relative;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000 51.04%, rgba(0, 0, 0, 0));
+    width: 1px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.small-text {
+    font-size: 12px;
+    margin-left: -18rem;
+}

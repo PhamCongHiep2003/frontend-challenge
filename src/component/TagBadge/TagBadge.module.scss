@@ -1,0 +1,35 @@
+.wrapper {
+    position: relative;
+    width: 113px;
+    height: 40px;
+    text-align: left;
+    font-size: 18px;
+    color: #217aff;
+    font-family: Roboto;
+    display: inline-block;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.tagbadge-child {
+    position: absolute;
+    height: 100%;
+    width: 123%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #217aff;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.grapple {
+    position: absolute;
+    top: 22.5%;
+    left: 14.44%;
+}
+

@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Monster"
+    },
+    {
+        "name": "Melee"
+    },
+    {
+        "name": "Human"
+    },
+    {
+        "name": "Ninja"
+    },
+    {
+        "name": "Agile"
+    },
+    {
+        "name": "God"
+    },
+    {
+        "name": "Strong"
+    },
+    {
+        "name": "Grappling"
+    },
+    {
+        "name": "Defend"
+    },
+    {
+        "name": "Attack"
+    },
+    {
+        "name": "Block"
+    },
+    {
+        "name": "Mercenary"
+    },
+    {
+        "name": "Demon"
+    },
+    {
+        "name": "Robot"
+    },
+    {
+        "name": "Magic"
+    },
+    {
+        "name": "Ranged"
+    },
+    {
+        "name": "Ghost"
+    },
+    {
+        "name": "Grapple"
+    },
+    {
+        "name": "Animal"
+    },
+    {
+        "name": "Alien"
+    },
+    {
+        "name": "Aerial"
+    },
+    {
+        "name": "My Team"
+    }
+]

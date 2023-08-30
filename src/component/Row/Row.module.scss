@@ -1,0 +1,46 @@
+.wrapper {
+    border: groove;
+}
+
+.inner-wrapper-left {
+    display: inline-block;
+    text-align: left;
+    width: 63%;
+}
+
+.inner-wrapper-right {
+    display: inline-block;
+    text-align: right;
+    width: 37%;
+}
+
+.row-element {
+    display: inline-block;
+    margin-right: 5rem;
+}
+
+.checkbox {
+    position: relative;
+    border-top: 3px solid #fff;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    //transform: rotate(-45deg);
+    transform-origin: 0 0;
+}
+
+.character-name {
+    position: relative;
+    font-size: 20px;
+    font-family: Roboto;
+    color: #000;
+    text-align: left;
+}
+
+.score {
+    position: relative;
+    font-size: 24px;
+    font-family: Roboto;
+    color: #000;
+    text-align: left;
+}
