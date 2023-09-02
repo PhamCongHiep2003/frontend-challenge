@@ -31,6 +31,7 @@ function Filters(props) {
             {tag_names.map((tag_name, index) => {
                 return <TagBadge key={index} text={tag_name.name} toggleState={handleToggleState} />
             })}
+            <TagBadge text='My Team' />
             <p className={cx('clear-all')}>Clear all</p>
         </div>
     );
