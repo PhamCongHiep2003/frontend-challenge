@@ -14,12 +14,14 @@ function FilterSearch() {
         filterInput: ''
     });
 
+    var myTeamList = [];
+
     const handleSearchInput = (params) => {
         setInput({
             searchInput: params,
             filterInput: input.filterInput,
         });
-    }
+    };
 
     const handleFilterInput = (params) => {
         params = params.map(i => i.toLowerCase());
@@ -27,13 +29,22 @@ function FilterSearch() {
             searchInput: input.searchInput,
             filterInput: params,
         });
-    }
+    };
+
+    const handleMyTeamInput = (isChecked, id) => {
+        if(isChecked) {
+            myTeamList.push(id);
+        } else {
+            myTeamList = myTeamList.filter(i => i !== id);
+        }
+        console.warn('myTeamList', myTeamList);
+    };
 
     return (
         <div className={cx('wrapper')}>
             <Search searchInput={handleSearchInput} />
             <Filters filterInput={handleFilterInput} />
-            <SearchResult input={input}/>
+            <SearchResult input={input} myTeamInput={handleMyTeamInput} />
         </div>
     );
 }

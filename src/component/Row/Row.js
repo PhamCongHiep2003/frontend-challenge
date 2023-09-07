@@ -7,10 +7,12 @@ import CharThumbnail from '../CharThumbnail/CharThumbnail';
 const cx = classNames.bind(styles);
 
 function Row({
+    id,
     charThumbnail,
     name,
     tags = [],
-    abilities
+    abilities,
+    checkboxInput,
 }) {
     var tags = Array.from(tags.map((item, index) => {
         return <TagBadge key={index} className={cx('row-element')} text={item.tag_name} />
@@ -26,10 +28,15 @@ function Row({
         </>
     )
 
+    const handleCheckboxChange = (e) => {
+        const isChecked = e.target.checked;
+        checkboxInput(isChecked, id);
+    };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner-wrapper-left')}>
-                <input type='checkbox' className={cx('row-element', 'checkbox')} />
+                <input type='checkbox' className={cx('row-element', 'checkbox')} onChange={handleCheckboxChange}/>
                 <CharThumbnail url={charThumbnail} className={cx('row-element')} />
                 <h4 className={cx('row-element', 'character-name')}>{name}</h4>
                 {tags}
