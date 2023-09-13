@@ -4,22 +4,28 @@ import { useState, useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
-function TagBadge(props) {
+function TagBadge({
+    className,
+    text,
+    toggleState,
+    isCleared,
+    isChosen,
+}) {
 
     const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
-        if (typeof props.toggleState === 'function') {
-            props.toggleState(toggle, props.text);
+        if (typeof toggleState === 'function') {
+            toggleState(toggle, text);
         }
     }, [toggle])
 
     useEffect(() => {
         setToggle(false);
-    }, [props.isReseted])
+    }, [isCleared])
 
     const setToggleState = () => {
-        props.isChosen(true);
+        isChosen(true);
         setToggle(!toggle);
     }
 
@@ -36,18 +42,18 @@ function TagBadge(props) {
     }
 
     var tagBadgeLogicForReset = () => {
-        if (props.isReseted) {
+        if (isCleared) {
             return (
-                <div onClick={setToggleState} className={cx('wrapper', props.className)}>
+                <div onClick={setToggleState} className={cx('wrapper', className)}>
                     <div style={styles} className={cx('tagbadge-child')}></div>
-                    <div style={styles} className={cx('grapple')}>{props.text}</div>
+                    <div style={styles} className={cx('grapple')}>{text}</div>
                 </div>
             )
         } else {
             return (
-                <div onClick={setToggleState} className={cx('wrapper', props.className)}>
+                <div onClick={setToggleState} className={cx('wrapper', className)}>
                     <div style={toggle ? setBackgroundColor() : styles} className={cx('tagbadge-child')}></div>
-                    <div style={toggle ? setTextColor() : styles} className={cx('grapple')}>{props.text} {toggle && '✓'}</div>
+                    <div style={toggle ? setTextColor() : styles} className={cx('grapple')}>{text} {toggle && '✓'}</div>
                 </div>
             )
         }

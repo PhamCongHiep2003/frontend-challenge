@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 function Filters(props) {
 
     const [chosenList, setChosenList] = useState([]);
-    const [isReseted, setIsReseted] = useState(false);
+    const [isCleared, setisCleared] = useState(false);
 
     var newArray = [...chosenList];
 
@@ -28,12 +28,12 @@ function Filters(props) {
     }
 
     const resetChosenList = () => {
-        setIsReseted(true);
+        setisCleared(true);
         setChosenList([]);
     };
 
     const handleIsChosen = () => {
-        setIsReseted(false);
+        setisCleared(false);
     };
 
     return (
@@ -43,7 +43,7 @@ function Filters(props) {
                     key={index}
                     text={tag_name.name}
                     toggleState={handleToggleState}
-                    isReseted={isReseted}
+                    isCleared={isCleared}
                     isChosen={handleIsChosen}
                 />
             })}
