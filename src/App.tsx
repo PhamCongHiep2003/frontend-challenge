@@ -15,6 +15,8 @@ const data: Character[] = jsonData as Character[]
 
 function App() {
 
+  const [myTeamList, setMyTeamList] = useState([]);
+
   return (
     <div className="App">
       <Masthead/>
